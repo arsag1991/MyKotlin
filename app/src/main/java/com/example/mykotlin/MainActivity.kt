@@ -23,9 +23,27 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == Constance.Request_code_sign_in) {
 
+        } else if (requestCode == Constance.Request_code_sign_up){
 
+            }
 
+    }
+
+    fun onClickSignIn (view: View){
+        val intent = Intent (this, SignInUpActivity::class.java)
+        intent.putExtra(Constance.Sign_state, Constance.Sign_in_state)
+        startActivityForResult(intent, Constance.Request_code_sign_in)
+    }
+
+    fun onClickSignUp (view: View){
+        val intent = Intent (this, SignInUpActivity::class.java)
+        intent.putExtra(Constance.Sign_state, Constance.Sign_up_state)
+        startActivityForResult(intent, Constance.Request_code_sign_up)
+    }
 
 
 
