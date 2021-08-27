@@ -1,7 +1,9 @@
 package com.example.mykotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.mykotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,43 +14,20 @@ class MainActivity : AppCompatActivity() {
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-        bindingClass.button.setOnClickListener {
-            val textFromET = bindingClass.fio.text.toString()
-            when (textFromET) {
+    }
 
-                Constance.buh -> {
-                    val tempText = "Ваша зарплата: ${Constance.zpBuh}"
-                    if (bindingClass.password.text.toString() == Constance.passBuh)
-                    {bindingClass.resault.text = tempText }
-                    else {bindingClass.resault.text = "Неверный пароль"}
-                }
+    fun onClickSignUp (view: View){
+        val signUp = Intent (this, SignInUpActivity::class.java)
+    }
 
-                Constance.it -> {
-                    val tempText = "Ваша зарплата: ${Constance.zpIt}"
-                    if (bindingClass.password.text.toString() == Constance.passIt)
-                    {bindingClass.resault.text = tempText}
-                     else {bindingClass.resault.text = "Неверный пароль"}
-                }
-
-                Constance.kadri -> {
-                    val tempText = "Ваша зарплата: ${Constance.zpKadri}"
-                if (bindingClass.resault.text.toString() == Constance.passKadri)
-                    {bindingClass.resault.text = tempText}
-                    else {bindingClass.resault.text = "Неверный пароль"}
-                }
-
-                else ->{bindingClass.resault.text = "Нет такого работника"}
-
-
-
-            }
-
-
-        }
-
-
+    fun onClickSignIn (view: View){
 
     }
+
+
+
+
+
 
 
 }
