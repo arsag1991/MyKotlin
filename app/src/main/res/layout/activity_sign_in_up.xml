@@ -23,13 +23,13 @@
         android:id="@+id/edLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="216dp"
         android:ems="10"
         android:hint="@string/login"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,11 +91,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="142dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bAvatar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/ic_launcher_background" />
 
     <Button
         android:id="@+id/bAvatar"
@@ -104,7 +105,8 @@
         android:onClick="onClickAvatar"
         android:text="@string/avatar"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edLogin"
         app:layout_constraintEnd_toEndOf="@+id/edLogin"
-        app:layout_constraintStart_toStartOf="@+id/edLogin"
-        app:layout_constraintTop_toBottomOf="@+id/imAvatar" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

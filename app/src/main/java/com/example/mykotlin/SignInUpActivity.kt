@@ -22,7 +22,7 @@ class SignInUpActivity : AppCompatActivity() {
             bindingClass.edName2.visibility = View.GONE
             bindingClass.edName3.visibility = View.GONE
             bindingClass.bAvatar.visibility = View.INVISIBLE
-            bindingClass.bAvatar.visibility = View.INVISIBLE
+
         }
         }
     fun onClickDone(view: View) {
